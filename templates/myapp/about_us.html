@@ -1,0 +1,85 @@
+
+{% load static %}
+
+<!doctype html>
+<head>
+<title>About Us Page</title>
+<style>
+     a:link{
+    
+    font-size:18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.nav-link{
+    color:darkorange;
+}
+
+</style>
+<link rel="stylesheet" href="{% static 'CSS/card1.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar bg-dark" style="color:black;">
+        <a class="navbar-brand" href="{% url 'Myapp:base' %}"><img src="{% static 'IMAGES/logo.png' %}" alt="Image9" width="150px" height="80px"></a></br></br>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav">
+                <li class="nav-item" style="margin-left:580px;">
+                    <a class="nav-link active" href="{% url 'Myapp:about_us' %}">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:gallery' %}">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:order' %}">Order Now</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:login' %}">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:sign_up' %}">Sign Up</a>
+                  </li>
+                  
+              </ul>
+              </div>
+              </nav>
+</br>
+</br>
+
+<h2 style="text-align: center;color:darkred;font-family: ALgerian;">Our Story</h2></br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <h4 style="font-size:22px; font-family:Algerian; font-weight:bolder;color:crimson">Time to be Different</h4></br>
+            <p style="font-size:18px; font-family:Algerian; font-weight:bolder">That's the motto at Watches.com. Founded by brothers Mitch & Andrew Greenblatt who are modern
+            horological enthusiasts with a passion for unique timepieces. 
+            They've been scouring the globe since 1999 discovering obscure, unusual brands 
+            that you've probably never heard of as well as carefully curating the brands you love.
+            Purveyors of wrist-borne time machines, Watches.com is a singular source for unusual modern 
+            watches from around the world. A watch says a lot about you and helps you stand out. 
+            It's time for YOU to be different.</br></br>
+            We believe that the modern watch represents more than just a functional mechanism to tell time.
+            The watch is a unique form of art, design and personal expression.
+            We've had a long-standing mission of providing unique and affordable timepieces to
+            adventurous enthusiasts as yourself. As the number one selling independent online watch store,
+            we plan to stay true to our core mission. </p>
+        </div>
+        <div class="col-sm-4" style="margin-top:100px;">
+            <img src="{% static 'IMAGES/image20.jpg' %}" alt="Image 15" width="400px" height="300px">
+        </div>
+    </div>
+</div>
+</br>
+</br>
+{% include "partials/_footer.html" %}
+</body>
+</html>

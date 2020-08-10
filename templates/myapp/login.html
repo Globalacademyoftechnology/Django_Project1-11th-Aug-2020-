@@ -1,0 +1,164 @@
+
+{% load static %}
+
+<!doctype html>
+<head>
+    <title>
+        Login Page
+    </title>
+    <style>
+
+     a:link{
+    
+    font-size:18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.nav-link{
+    color:darkorange;
+}
+
+.cont{
+    border:2px solid black;
+    width:500px;
+    height:570px;
+    margin-left:50px;
+    margin-top:70px;
+    padding:30px;
+    background-color: black;
+    
+}
+.b
+{
+    border:1px solid black;
+    width:200px;
+    height:30px;
+    border-radius:80px;
+    font-size:14px;
+    font-weight: bolder;
+    background-color:blue;
+}
+
+.c
+{
+    border:1px solid black;
+    width:200px;
+    height:30px;
+    border-radius:80px;
+    font-size:14px;
+    font-weight: bolder;
+    background-color:red;
+}
+
+
+input{
+    font-size:15px;
+    font-weight: bolder;
+    background-color: white;
+    color:black;
+    width:430px;
+    height:40px;
+}
+
+.d{
+    border:1p solid black;
+    width:440px;
+    height:40px;
+    border-radius:100px;
+    background-color:#12EAE1;
+    font-weight: bold;
+    color: black;
+}
+
+.e{
+    border:1px solid black;
+    width:430px;
+    height:40px;
+    background-color: darkblue;
+    color:white
+}
+
+.e:hover{
+    background-color: white;
+    color:red;
+}
+
+.f{ 
+    margin-left:70px;
+    margin-top:120px;
+}
+
+.g{
+    margin-left:30px;
+    margin-top:120px;
+}
+
+</style>
+<link rel="stylesheet" href="{% static 'CSS/card1.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar bg-dark" style="color:black;">
+        <a class="navbar-brand" href="{% url 'Myapp:base' %}"><img src="{% static 'IMAGES/logo.png' %}" alt="Image9" width="150px" height="80px"></a></br></br>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav">
+                <li class="nav-item" style="margin-left:580px;">
+                    <a class="nav-link active" href="{% url 'Myapp:about_us' %}">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:gallery' %}">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:order' %}">Order Now</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:login' %}">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:sign_up' %}">Sign Up</a>
+                  </li>
+                  
+              </ul>
+              </div>
+              </nav>
+</br>
+</br>
+<marquee behavior="scroll" direction="right" style="font-size:30px;font-weight: bold;color:black;font-family: Algerian;">Add a new style to your life</marquee>
+<div class="watch">
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="{% static 'IMAGES/image2.jpg' %}" alt="IMAGE11" width="130px" height:"40px" class="f">
+        </div>
+        <div class="col-sm-3">
+            <img src="{% static 'IMAGES/image6.jpg' %}" alt="IMAGE11" width="250px" height:"200px" class="g">
+        </div>
+        <div class="col-sm-6">
+            <div class="cont">
+    
+            <h3 style="color:white;text-align: center;font-size:30px;font-weight:bold;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+                Sign in
+            </h3></br>
+            <a href="" ><button class="b">Sign in with Facebook</button></a>&nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="" ><button class="c">Sign in with Google+</button></a></br></br>
+            <p style="text-align: center;font-size:20px;font-weight: bold;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:white;">OR</p>
+            <input type="email" name="email" placeholder="Email address" required></br></br>
+            <input type="password" name="email" placeholder="Password" required></br></br></br>
+            <a href="" ><button class="d">Sign in</button></a></br></br>
+            <h4 style="color:white;font-size:20px;font-weight: bold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Forgot Password?</h4></br>
+            </br><a href="{% url 'Myapp:sign_up' %}" ><button class="e">Sign Up with New Account</button></a></br></br>
+            </div>
+        </div>
+    </div>
+</div></br>
+{% include "partials/_footer.html" %}
+    </body>
+</html>

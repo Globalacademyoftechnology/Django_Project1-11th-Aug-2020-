@@ -1,0 +1,120 @@
+
+{% load static %}
+
+<!doctype html>
+<head>
+    <title>
+        Sign Up Page
+    </title>
+    <style>
+        
+
+     a:link{
+    
+    font-size:18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.nav-link{
+    color:darkorange;
+}
+
+
+
+.cont{
+    border:1px solid black;
+    border-radius:100px 100px;
+    width:500px;
+    height:530px;
+    margin-left:440px;
+    margin-top:100px;
+    padding:30px;
+    background-color: coral;
+
+}
+
+
+
+input{
+    border: 2px solid black;
+    width:200px;
+    height:30px;
+    border-radius:80px;
+    background-color:white;
+    color: black;
+    font-weight: bold;
+}
+
+
+a button{
+    border:1px solid black;
+    width:170px;
+    height:40px;
+    border-radius:80px;
+    background-color:maroon;
+    color:white;
+    font-size:17px;
+    padding:8px;
+    margin-left:130px;
+}
+
+
+a button:hover{
+    background-color:black;
+}
+
+
+</style>
+<link rel="stylesheet" href="{% static 'CSS/card1.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar bg-dark" style="color:black;">
+        <a class="navbar-brand" href="{% url 'Myapp:base' %}"><img src="{% static 'IMAGES/logo.png' %}" alt="Image9" width="150px" height="80px"></a></br></br>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav">
+                <li class="nav-item" style="margin-left:580px;">
+                    <a class="nav-link active" href="{% url 'Myapp:about_us' %}">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:gallery' %}">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:order' %}">Order Now</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:sign_up' %}">Sign Up</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'Myapp:login' %}">Login</a>
+                    </li>
+              </ul>
+              </div>
+              </nav>
+</br>
+</br>
+<div class="cont">
+    <h4 style="font-size:30px;font-family:Georgia, 'Times New Roman', Times, serif;font-weight: bold; text-align: center;">Timeless watches by far</h3></br>
+    <h5 style="font-size:18px;font-family:Georgia, 'Times New Roman', Times, serif;font-weight: bold; text-align:center;">
+        Sign Up here
+    </h5>
+    </h4></br>
+    <input type="text" name="firstname" placeholder="Firstname" required></br></br>
+    <input type="text" name="Lastname" placeholder="Lastname" required></br></br>
+    <input type="email" name="Email" placeholder="Email address" required></br></br>
+    <input type="password" name="pass" placeholder="Password" required></br></br>
+    <input type="password" name="confirm_pass" placeholder="Confirm Password"  required></br></br></br>
+    <a href="#"><button>Sign Up</button></a></p>
+</div></br>
+{% include "partials/_footer.html" %}
+    </body>
+</html>

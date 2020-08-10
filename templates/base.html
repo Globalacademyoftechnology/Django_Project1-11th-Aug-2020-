@@ -1,0 +1,94 @@
+{% load static %}
+
+<!doctype html>
+<head>
+<title>Base page</title>
+<style>
+     a:link{
+    
+    font-size:18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.nav-link{
+    color:darkorange;
+}
+
+img:hover{
+    opacity:0.8;
+}
+
+</style>
+<link rel="stylesheet" href="{% static 'CSS/card1.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar bg-dark" style="color:black;">
+        <a class="navbar-brand" href="{% url 'Myapp:base' %}"><img src="{% static 'IMAGES/logo.png' %}" alt="Image9" width="160px" height="85px"></a></br></br>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav">
+                <li class="nav-item" style="margin-left:580px;">
+                    <a class="nav-link active" href="{% url 'Myapp:about_us' %}">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:gallery' %}">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:order' %}">Order Now</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:login' %}">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'Myapp:sign_up' %}">Sign Up</a>
+                  </li>
+                  
+              </ul>
+              </div>
+              </nav>
+</br>
+</br>
+<marquee behaviour="scroll" style="font-size:25px;font-family: ALgerian;font-weight: bold;color:red;">Adding you a new Style and giving a new style that matters </marquee>
+</br></br><div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <a href="{% url 'Myapp:gallery' %}"><img src="{% static 'IMAGES/image22.jpg' %}" alt="Image22" width="1300px" height="480px" style="margin-left:20px;"></a>
+        </div>   
+    </div></br></br>
+    <div class="row">
+        <div class="col-md-6">
+            <a href="{% url 'Myapp:gallery' %}"><img src="{% static 'IMAGES/image23.jpg' %}" alt="Image23" width="550px" height="400px" style="margin-left:50px;"></a>
+        </div>   
+        <div class="col-md-6">
+            <a href="{% url 'Myapp:gallery' %}"><img src="{% static 'IMAGES/image24.jpg' %}" alt="Image24" width="550px" height="400px" style="margin-left:50px;"></a>
+        </div> 
+    </div></br></br></br>
+    <div class="row">
+        <div class="col-md-6">
+            <a href="{% url 'Myapp:gallery' %}"><img src="{% static 'IMAGES/image25.jpg' %}" alt="Image24" width="550px" height="400px" style="margin-left:50px;"></a>
+        </div>   
+        <div class="col-md-6">
+            <a href="{% url 'Myapp:gallery' %}"><img src="{% static 'IMAGES/image29.webp' %}" alt="Image8" width="550px" height="400px" style="margin-left:50px;"></a>
+        </div> 
+    </div></br></br></br>
+    <div class="row">
+        <div class="col-md-6">
+            <a href="{% url 'Myapp:gallery' %}"><img src="{% static 'IMAGES/image27.webp' %}" alt="Image8" width="550px" height="400px" style="margin-left:50px;"></a>
+        </div>   
+        <div class="col-md-6">
+            <a href="{% url 'Myapp:gallery' %}"><img src="{% static 'IMAGES/image28.webp' %}" alt="Image8" width="550px" height="400px" style="margin-left:50px;"></a>
+        </div> 
+    </div>
+</div></br>
+{% include "partials/_footer.html" %}
+</body>
+</html>

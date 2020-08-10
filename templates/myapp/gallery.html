@@ -1,0 +1,128 @@
+{% load static %}
+
+<html>
+    <head>
+<title>Gallery Page</title>
+
+
+<style>
+         a:link{
+    
+    font-size:18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.nav-link{
+    color:white;
+}
+
+img:hover{
+        opacity:0.5;
+    }
+</style>
+</head>
+<link rel="stylesheet" href="{% static 'CSS/card1.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar bg-dark" style="color:black;">
+        <a class="navbar-brand" href="{% url 'Myapp:base' %}"><img src="{% static 'IMAGES/logo.png' %}" alt="Image9" width="150px" height="80px"></a></br></br>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav">
+                <li class="nav-item" style="margin-left:580px;">
+                  <a class="nav-link active" href="{% url 'Myapp:about_us' %}">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'Myapp:gallery' %}">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'Myapp:order' %}">Order Now</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'Myapp:login' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'Myapp:sign_up' %}">Sign Up</a>
+                </li>
+                
+              </ul>
+              </div>
+              </nav>
+</br>
+</br>
+
+
+<h1 style="text-align: center;text-decoration: uppercase;font-size: 50px;color: black;font-family: Algerian;">GALLERY</h1></br></br>
+<div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="{% static 'IMAGES/image1.jpg' %}" alt="IMAGE1" height="150px" width="150px"></br></br><p style="font-weight: bolder;">Samsung Gear Fit 2 Pro</p>
+      </div>
+      <div class="col-md-3">
+        <img src="{% static 'IMAGES/image2.jpg' %}" alt="IMAGE2" height="150px" width="150px"></br></br><p style="font-weight: bolder;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MI Band 3</p>
+      </div>
+      <div class="col-md-3">
+        <img src="{% static 'IMAGES/image3.jpg' %}" alt="IMAGE3" height="150px" width="150px"></br></br><p style="font-weight: bolder;">MI Smart Band 4</p>
+      </div>
+      <div class="col-md-3">
+        <img src="{% static 'IMAGES/image4.jpg' %}" alt="IMAGE4" height="150px" width="150px"></br></br><p style="font-weight: bolder;">M3 Fitness Band</p>
+      </div>
+    </div></br>
+</br></br></br>
+    <div class="row">
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image9.jpg' %}" alt="IMAGE5" height="150px" width="150px"></br></br><p style="font-weight: bolder;">Mevo FIt Slim Smart-Fitness</p>
+        </div>
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image6.jpg' %}" alt="IMAGE6" height="150px" width="150px"></br></br><p style="font-weight: bolder;">&nbsp;&nbsp;Health Bracelet</p>
+        </div>
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image7.jpg' %}" alt="IMAGE7" height="150px" width="150px"></br></br><p style="font-weight: bolder;">Fastrack Reflex Smart Band</p>
+        </div>
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image10.jpg' %}" alt="IMAGE8" height="150px" width="200px"></br></br> <p style="font-weight: bolder;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Realme Band</p>
+        </div>
+      </div></br>
+    </br></br></br>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image11.jpg' %}" alt="IMAGE9" height="150px" width="150px"></br></br><p style="font-weight: bolder;">Blutooth Smart Fitness band</p>
+        </div>
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image12.jpg' %}" alt="IMAGE10" height="150px" width="150px"></br></br><p style="font-weight: bolder;">&nbsp;&nbsp;&nbsp;&nbsp;Bingo M2 BLK</p>
+        </div>
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image13.jpg' %}" alt="IMAGE11" height="150px" width="150px"></br></br><p style="font-weight: bolder;">Fitness Tracker</p>
+        </div>
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image14.jpg' %}" alt="IMAGE12" height="150px" width="200px"></br></br> <p style="font-weight: bolder;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Honor Band 5</p>
+        </div>
+      </div> </br></br></br></br>
+      <div class="row">
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image16.jpg' %}" alt="IMAGE9" height="150px" width="150px"></br></br><p style="font-weight: bolder;">Xeck Smart Band</p>
+        </div>
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image17.jpg' %}" alt="IMAGE10" height="150px" width="150px"></br></br><p style="font-weight: bolder;">Touch Screen Watch</p>
+        </div>
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image18.jpg' %}" alt="IMAGE11" height="150px" width="150px"></br></br><p style="font-weight: bolder;">Garmin Vivo fitness band</p>
+        </div>
+        <div class="col-md-3">
+          <img src="{% static 'IMAGES/image19.jpg' %}" alt="IMAGE12" height="150px" width="200px"></br></br> <p style="font-weight: bolder;">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Infinizy Getfit band</p>
+        </div>
+      </div> </br></br>
+  </div>
+
+{% include "partials/_footer.html" %}
+</body>
+</html>
